@@ -30,10 +30,14 @@
           Try it free 7 days <span> then $20/mo. thereafter</span>
         </div>
         <form method="POST" class="form" id="form">
-          <input type="text" name="firstname" id="firstname" class="form-field" placeholder='first name' required autofocus/>
-          <input type="text" name="lastname" id="lastname" class="form-field" placeholder='last name' required/>
-          <input type="email" name="email" id="email" class="form-field" placeholder='email address' required/>
-          <input type="password" name="password" id="password" class="form-field" placeholder='password' minlength="5" required/>
+          <input type="text" name="firstname" id="firstname" class="form-field" placeholder='First Name' maxlength="30" autofocus/>
+          <p class="error-text">First Name cannot be empty</p>
+          <input type="text" name="lastname" id="lastname" class="form-field" placeholder='Last Name' maxlength="30" />
+          <p class="error-text">Last Name cannot be empty</p>
+          <input type="email" name="email" id="email" class="form-field" placeholder='Email Address' maxlength="35"/>
+          <p class="error-text">Looks like this is not an email</p>
+          <input type="password" name="password" id="password" class="form-field" placeholder='Password' minlength="5" maxlength="30" />
+          <p class="error-text">Password cannot be empty</p>
           <button class="submit form-field" id="submit">claim your free trial</button>
           <p class="agree">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
         </form>

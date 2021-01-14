@@ -127,19 +127,7 @@ main section > * {
   font-family: 'Poppins', sans-serif;
 }
 
-.signup .form-field::-webkit-input-placeholder {
-  text-transform: capitalize;
-}
-
-.signup .form-field:-ms-input-placeholder {
-  text-transform: capitalize;
-}
-
-.signup .form-field::-ms-input-placeholder {
-  text-transform: capitalize;
-}
-
-.signup .form-field::placeholder {
+.signup .form-field#firstname, .signup .form-field#lastname {
   text-transform: capitalize;
 }
 
@@ -149,42 +137,37 @@ main section > * {
 
 .signup .form-field-error {
   border: 2px solid #ff7a7a;
+  background: url("./images/icon-error.svg") no-repeat;
+  background-position: center right 5%;
+}
+
+.signup .form-field-error:focus {
+  border: 2px solid #ff7a7a;
 }
 
 .signup .form-field-error::-webkit-input-placeholder {
-  content: '';
   color: #ff7a7a;
 }
 
 .signup .form-field-error:-ms-input-placeholder {
-  content: '';
   color: #ff7a7a;
 }
 
 .signup .form-field-error::-ms-input-placeholder {
-  content: '';
   color: #ff7a7a;
 }
 
 .signup .form-field-error::placeholder {
-  content: '';
   color: #ff7a7a;
 }
 
-.signup .form-field-error#email::-webkit-input-placeholder {
-  content: 'example@email.com';
-}
-
-.signup .form-field-error#email:-ms-input-placeholder {
-  content: 'example@email.com';
-}
-
-.signup .form-field-error#email::-ms-input-placeholder {
-  content: 'example@email.com';
-}
-
-.signup .form-field-error#email::placeholder {
-  content: 'example@email.com';
+.signup .form .error-text {
+  text-align: right;
+  color: #ff7a7a;
+  font-size: 10px;
+  margin-top: -1%;
+  margin-bottom: 2%;
+  display: none;
 }
 
 .signup .form button {
@@ -198,10 +181,14 @@ main section > * {
   font-weight: 600;
 }
 
-.signup .form button:focus {
+.signup .form button:active {
   background: #61d6a3;
   -webkit-box-shadow: 0 3px #38cc8c;
           box-shadow: 0 3px #38cc8c;
+  border: none;
+}
+
+.signup .form button:focus {
   border: none;
 }
 

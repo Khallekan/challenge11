@@ -84,23 +84,32 @@ main {
 			border-radius: 5px;
 			font-weight: 600;
 			font-family: 'Poppins', sans-serif;
-			&::placeholder {
+			&#firstname,
+			&#lastname {
 				text-transform: capitalize;
-				// font-weight: 700;
 			}
 			&:focus {
 				border: 1px solid black;
 			}
 			&-error {
 				border: 2px solid $red;
+				background: url('./images/icon-error.svg') no-repeat;
+				background-position: center right 5%;
+				&:focus {
+					border: 2px solid $red;
+				}
 				&::placeholder {
-					content: '';
 					color: $red;
 				}
-				&#email::placeholder {
-					content: 'example@email.com';
-				}
 			}
+		}
+		.error-text {
+			text-align: right;
+			color: $red;
+			font-size: 10px;
+			margin-top: -1%;
+			margin-bottom: 2%;
+			display: none;
 		}
 		button {
 			background-color: $green;
@@ -110,9 +119,12 @@ main {
 			text-transform: uppercase;
 			color: lighten($grayish-blue, 25);
 			font-weight: 600;
-			&:focus {
+			&:active {
 				background: lighten($color: $green, $amount: 10);
 				box-shadow: 0 3px lighten($color: $green, $amount: 0);
+				border: none;
+			}
+			&:focus {
 				border: none;
 			}
 		}
