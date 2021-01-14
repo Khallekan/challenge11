@@ -13,6 +13,7 @@ const validateEmail = (email)=> {
 
 form.setAttribute('method', 'POST');
 form.setAttribute('novalidate', true);
+
 const formValidate = (e) => {
   e.preventDefault();
   
@@ -21,9 +22,7 @@ const formValidate = (e) => {
     const element = input[i];
     errorT.style.display = 'none';
     element.classList.remove('form-field-error');
-    // errorT.setAttribute('placeholder');
   }
-  
   let arrI = input.length - 1;
   for (let i = 0; i < arrI; i++) {
     const element = input[i];
@@ -40,11 +39,9 @@ const formValidate = (e) => {
       errorT.style.display = 'block';
       element.setAttribute('placeholder', `email@example.com`);
     }
-    // if 
-    // let emailValue = input[2].value;
-    // if (!(validateEmail(emailValue))) {
-      
-    // }
+  }
+  for (let i = 0; i < arrI.length; i++) {
+    const element = arrI[i];
   }
 }
 
