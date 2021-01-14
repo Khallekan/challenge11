@@ -139,6 +139,7 @@ main section > * {
   border: 2px solid #ff7a7a;
   background: url("./images/icon-error.svg") no-repeat;
   background-position: center right 5%;
+  background-size: auto 50%;
 }
 
 .signup .form-field-error:focus {
@@ -210,4 +211,68 @@ footer {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
+}
+
+@media all and (max-width: 1024px) {
+  body {
+    background: url("./images/bg-intro-mobile.png") no-repeat, #ff7a7a;
+    background-size: 100% auto;
+  }
+  main {
+    overflow-y: auto;
+  }
+  main section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    text-align: center;
+    padding: 12vw 5vw 5vw 5vw;
+    gap: 3%;
+  }
+  .header {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
+  }
+  .header-1 {
+    width: 75vw;
+    margin: 0 auto;
+    font-size: 7.5vw;
+  }
+  .header-2 {
+    font-size: 4.5vw;
+    margin-top: 6vw;
+  }
+  .signup {
+    height: 100%;
+  }
+  .signup-h {
+    height: 15%;
+    font-size: 4vw;
+  }
+  .signup-h p {
+    width: 60%;
+  }
+  .signup-h p span {
+    margin: 0;
+  }
+  .signup .form-field {
+    font-size: 3vw;
+    height: 10vw;
+  }
+  .signup .form .agree {
+    margin: 1% auto 3% auto;
+    width: 85%;
+    font-size: 3vw;
+  }
+  .signup .form .error-text {
+    font-size: 3vw;
+  }
+  .attribution {
+    font-size: 3.5vw;
+  }
 }

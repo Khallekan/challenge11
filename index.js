@@ -11,7 +11,8 @@ const validateEmail = (email)=> {
   return re.test(email);
 }
 
-
+form.setAttribute('method', 'POST');
+form.setAttribute('novalidate', true);
 const formValidate = (e) => {
   e.preventDefault();
   
