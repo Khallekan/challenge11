@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import './variables';
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 1fr auto;
+	background: url('./images/bg-intro-desktop.png') no-repeat, $red;
+	background-size: 100% 100%;
+	font-family: 'Poppins', sans-serif;
+}
+main {
+	grid-column: span 1;
+	grid-template-rows: 1/2;
+	section {
+		height: 100%;
+		padding: 0 10%;
+		display: flex;
+		align-items: center;
+		gap: 1%;
+		& > * {
+			flex: 0 0 50%;
+		}
+	}
+}
+.header {
+	color: white;
+	&-1 {
+		font-weight: 700;
+		font-size: 4vw;
+		line-height: 110%;
+	}
+	&-2 {
+		font-weight: 600;
+		color: lighten($grayish-blue, 20);
+		margin-top: 3%;
+	}
+}
+
+.signup {
+	height: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	gap: 3%;
+	&-h {
+		width: 100%;
+		background-color: $blue;
+		border-radius: 5px;
+		height: 8%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include box-shadow;
+		color: white;
+		font-weight: 700;
+		font-size: 14px;
+		span {
+			font-weight: 400;
+			margin-left: 0.3ch;
+		}
+	}
+	.form {
+		display: flex;
+		flex-flow: column nowrap;
+		padding: 5%;
+		background-color: white;
+		border-radius: 5px;
+		@include box-shadow;
+		&-field {
+			margin: 2% 0;
+			height: 45px;
+			padding-left: 7%;
+			outline: none;
+			border: 1px solid $grayish-blue;
+			border-radius: 5px;
+			font-weight: 600;
+			font-family: 'Poppins', sans-serif;
+			&::placeholder {
+				text-transform: capitalize;
+				// font-weight: 700;
+			}
+			&:focus {
+				border: 1px solid black;
+			}
+			&-error {
+				border: 2px solid $red;
+				&::placeholder {
+					content: '';
+					color: $red;
+				}
+				&#email::placeholder {
+					content: 'example@email.com';
+				}
+			}
+		}
+		button {
+			background-color: $green;
+			padding-left: 0;
+			border: none;
+			box-shadow: 0 3px darken($green, 20);
+			text-transform: uppercase;
+			color: lighten($grayish-blue, 25);
+			font-weight: 600;
+			&:focus {
+				background: lighten($color: $green, $amount: 10);
+				box-shadow: 0 3px lighten($color: $green, $amount: 0);
+				border: none;
+			}
+		}
+		.agree {
+			font-size: 10px;
+			text-align: center;
+			font-weight: 600;
+			color: $grayish-blue;
+			margin: 1% 0 3% 0;
+			span {
+				color: $red;
+				font-weight: 700;
+			}
+		}
+	}
+}
+footer {
+	grid-column: span 1;
+	grid-row: 2/3;
+}
+
+// .form-field-error {
+
+// }

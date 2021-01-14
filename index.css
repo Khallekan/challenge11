@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 1fr auto;
+      grid-template-rows: 1fr auto;
+  background: url("./images/bg-intro-desktop.png") no-repeat, #ff7a7a;
+  background-size: 100% 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+main {
+  grid-column: span 1;
+  -ms-grid-rows: 1/2;
+      grid-template-rows: 1/2;
+}
+
+main section {
+  height: 100%;
+  padding: 0 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1%;
+}
+
+main section > * {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+.header {
+  color: white;
+}
+
+.header-1 {
+  font-weight: 700;
+  font-size: 4vw;
+  line-height: 110%;
+}
+
+.header-2 {
+  font-weight: 600;
+  color: #f6f5f9;
+  margin-top: 3%;
+}
+
+.signup {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3%;
+}
+
+.signup-h {
+  width: 100%;
+  background-color: #6055a5;
+  border-radius: 5px;
+  height: 8%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 7px rgba(62, 60, 73, 0.3);
+          box-shadow: 0px 7px rgba(62, 60, 73, 0.3);
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.signup-h span {
+  font-weight: 400;
+  margin-left: 0.3ch;
+}
+
+.signup .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  padding: 5%;
+  background-color: white;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 7px rgba(62, 60, 73, 0.3);
+          box-shadow: 0px 7px rgba(62, 60, 73, 0.3);
+}
+
+.signup .form-field {
+  margin: 2% 0;
+  height: 45px;
+  padding-left: 7%;
+  outline: none;
+  border: 1px solid #b9b6d3;
+  border-radius: 5px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+
+.signup .form-field::-webkit-input-placeholder {
+  text-transform: capitalize;
+}
+
+.signup .form-field:-ms-input-placeholder {
+  text-transform: capitalize;
+}
+
+.signup .form-field::-ms-input-placeholder {
+  text-transform: capitalize;
+}
+
+.signup .form-field::placeholder {
+  text-transform: capitalize;
+}
+
+.signup .form-field:focus {
+  border: 1px solid black;
+}
+
+.signup .form-field-error {
+  border: 2px solid #ff7a7a;
+}
+
+.signup .form-field-error::-webkit-input-placeholder {
+  content: '';
+  color: #ff7a7a;
+}
+
+.signup .form-field-error:-ms-input-placeholder {
+  content: '';
+  color: #ff7a7a;
+}
+
+.signup .form-field-error::-ms-input-placeholder {
+  content: '';
+  color: #ff7a7a;
+}
+
+.signup .form-field-error::placeholder {
+  content: '';
+  color: #ff7a7a;
+}
+
+.signup .form-field-error#email::-webkit-input-placeholder {
+  content: 'example@email.com';
+}
+
+.signup .form-field-error#email:-ms-input-placeholder {
+  content: 'example@email.com';
+}
+
+.signup .form-field-error#email::-ms-input-placeholder {
+  content: 'example@email.com';
+}
+
+.signup .form-field-error#email::placeholder {
+  content: 'example@email.com';
+}
+
+.signup .form button {
+  background-color: #38cc8c;
+  padding-left: 0;
+  border: none;
+  -webkit-box-shadow: 0 3px #207e55;
+          box-shadow: 0 3px #207e55;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 600;
+}
+
+.signup .form button:focus {
+  background: #61d6a3;
+  -webkit-box-shadow: 0 3px #38cc8c;
+          box-shadow: 0 3px #38cc8c;
+  border: none;
+}
+
+.signup .form .agree {
+  font-size: 10px;
+  text-align: center;
+  font-weight: 600;
+  color: #b9b6d3;
+  margin: 1% 0 3% 0;
+}
+
+.signup .form .agree span {
+  color: #ff7a7a;
+  font-weight: 700;
+}
+
+footer {
+  grid-column: span 1;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
